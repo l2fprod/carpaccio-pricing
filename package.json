@@ -1,0 +1,23 @@
+{
+  "name": "carpaccio-pricing",
+  "version": "1.0.0",
+  "description": "Empty pricing engine implementation for the carpaccio game",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/l2fprod/carpaccio-pricing.git"
+  },
+  "author": "Frederic Lavigne <fred@fredericlavigne.com> (http://fredericlavigne.com)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/l2fprod/carpaccio-pricing/issues"
+  },
+  "homepage": "https://github.com/l2fprod/carpaccio-pricing#readme",
+  "dependencies": {
+    "cfenv": "^1.0.3",
+    "express": "^4.13.3"
+  }
+}

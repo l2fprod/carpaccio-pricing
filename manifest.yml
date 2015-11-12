@@ -1,0 +1,4 @@
+applications:
+- name: carpaccio-pricing
+  host: carpaccio-pricing
+  memory: 256M
