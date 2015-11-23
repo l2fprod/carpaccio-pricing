@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+// Licensed under the Apache License. See footer for details.
+-->
+<html lang="en">
+
+<head>
+  <title>Elephant Carpaccio - a Nano-incremental development exercise</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google" content="notranslate" />
+
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1>Carpaccio Pricing Spec &amp; Testing</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Input Parameters</h3>
+        <p>
+          <ul>
+            <li><code>price</code> - the price of an item in the transaction</li>
+            <li><code>quantity</code> - the number of items in the transaction</li>
+            <li><code>state</code> - the state of residence of the customer for this transaction</li>
+          </ul>
+        </p>
+        <h3>Response</h3>
+        <h4>Content-Type</h4>
+        <p>
+          Response content type is expected to be <code>application/json</code>
+        </p>
+        <h4>Success (status code 200)</h4>
+        <pre>{
+  price: number
+}</pre> As example:
+        <pre>{
+  price: 2390.99
+}</pre>
+        <h4>Failure (all other status code)</h4>
+        <pre>{
+  error: string
+}</pre>
+      </div>
+      <div class="col-md-6">
+        <h3>Testing your pricing engine</h3>
+        <p>
+          Use the next form to test the behavior of your pricing engine. This does not replace proper unit testing but it is a quick way to post values and look up the result.
+        </p>
+        <form action="/pricing" method="get">
+          <div class="form-group">
+            <label>Item Price</label>
+            <input class="form-control" type="number" name="price" />
+          </div>
+
+          <div class="form-group">
+            <label>Quantity</label>
+            <input class="form-control" type="number" name="quantity" />
+          </div>
+
+          <div class="form-group">
+            <label>State</label>
+            <input class="form-control" type="text" name="state" />
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-large btn-info">Submit</button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    made by <a href="https://github.com/frawa">frank</a> and <a href="https://twitter.com/l2fprod">fred</a>
+  </footer>
+
+  <script src="vendor/angular/angular.min.js "></script>
+  <script src="vendor/jquery/dist/jquery.min.js "></script>
+  <script src="vendor/bootstrap/dist/js/bootstrap.min.js "></script>
+  <script src="js/app.js "></script>
+</body>
+<!--
+//------------------------------------------------------------------------------
+// Licensed under the Apache License, Version 2.0 (the "License ");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS " BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//------------------------------------------------------------------------------
+-->

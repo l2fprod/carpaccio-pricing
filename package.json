@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/l2fprod/carpaccio-pricing#readme",
   "dependencies": {
+    "bower": "^1.6.5",
     "cfenv": "^1.0.3",
     "express": "^4.13.3"
   }

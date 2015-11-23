@@ -1,0 +1,11 @@
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
