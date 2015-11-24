@@ -4,7 +4,8 @@
   "description": "Empty pricing engine implementation for the carpaccio game",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "postinstall": "bower install --allow-root"
   },
   "repository": {
     "type": "git",
