@@ -32,6 +32,8 @@ In this section, you will create your Bluemix account, deploy an empty pricing e
 
   ![Register](instructions/06-login.png)
 
+  Once logged, the Bluemix console is shown on the dashboard:  
+  
   ![Register](instructions/07-logged.png)
   
 1. Push the deploy button below:
@@ -42,7 +44,7 @@ In this section, you will create your Bluemix account, deploy an empty pricing e
 
   ![Register](instructions/10-login-to-deploy.png)
   
-1. If you never connected to Bluemix DevOps before, you will be prompted to define an alias to be used by DevOps services (your Git username in this context)
+1. If you never connected to Bluemix DevOps before, you will be prompted to define an alias to be used by DevOps services
 
   ![Register](instructions/11-pick-devops-alias.png)
 
@@ -58,17 +60,17 @@ In this section, you will create your Bluemix account, deploy an empty pricing e
 
   ![Register](instructions/14-and-deploy.png)
   
-1. Once the application has finished deploying, you will see a "Success!" message.
+1. Once the application has finished deploying, you will see a **Success!** message.
 
   ![Register](instructions/15-congrats.png)
 
   The process has created a new private DevOps Services project, a git clone of the lab source code repository, built your application and deployed it to IBM Bluemix. In addition, it configured a Build & Deploy pipeline that will get triggered whenever your commit changes to the Git repository.
 
-1. Click "View Your App" to access the deployed application
+1. Click **View Your App** to access the deployed application
 
   ![Register](instructions/16-view-app.png)
   
-1. We are now going to perform changes to the running application. Back to the "Deploy to Bluemix" page, click "Edit Code"
+1. We are now going to perform changes to the running application. Back to the "Deploy to Bluemix" page, click **Edit Code**
 
   ![Register](instructions/17-edit-app.png)
   
@@ -77,25 +79,25 @@ In this section, you will create your Bluemix account, deploy an empty pricing e
   ![Register](instructions/18-web-editor.png)
   
   The web editor allows to modify and commit changes to the project without leaving your web browser.
-  It comes with a "Live Edit" feature allowing to modify the changes to the running app without having to commit the changes to the code to the Git repository. We will enable and use this feature in the next steps to accelerate the round trip between changing the code and viewing the impact of the change on the deployed app.
+  It comes with a **Live Edit** feature allowing to modify the changes to the running app without having to commit the changes to the code to the Git repository. We will enable and use this feature in the next steps to accelerate the round trip between changing the code and viewing the impact of the change on the deployed app.
   
-1. Enable "Live Edit" by clicking on the switch
+1. Enable **Live Edit** by clicking on the switch
   
   ![Register](instructions/19-enable-live-edit.png)
   
-1. Say "OK" when prompted
+1. Click **OK** when prompted
 
   ![Register](instructions/20-live-edit-ok.png)
   
-1. Wait until "Live Edit" is enabled for the app. Notice the indicator needs the project name shows a background task is running
+1. Wait until **Live Edit** is enabled for the app. Notice the indicator near the project name shows the status of enabling Live Edit for your app
 
   ![Register](instructions/21-enabling-live-edit.png)
   
-1. After a short while, the project indicator becomes green again. "Live Edit" is enabled.
+1. After a short while, the project indicator becomes green again. **Live Edit** is enabled.
 
   ![Register](instructions/22-live-edit-enabled.png)
   
-1. Open the file "app.js" which contains the pricing engine implementation
+1. Open the file **app.js** which contains the pricing engine implementation
 
   ![Register](instructions/23-open-backend.png)
 
@@ -103,7 +105,7 @@ In this section, you will create your Bluemix account, deploy an empty pricing e
 
   ![Register](instructions/24-modify-backend-with-error.png)
   
-1. To illustrate the "Live Edit" feature, let's modify the implementation. Instead of simply returning the error code, we will also add a message.
+1. To illustrate the **Live Edit** feature, let's modify the implementation. Instead of simply returning the error code, we will also add a message.
 
   The new code reads as:
   ```
@@ -116,12 +118,34 @@ In this section, you will create your Bluemix account, deploy an empty pricing e
   
 1. Let's do another change, this time we show a dummy implementation return 0 as the totalPrice for the transaction
 
+  ```
+  res.send({totalPrice: 0})
+  ```
+
   ![Register](instructions/26-another-modification-sending-a-price.png)
+  
+  Once modified, click the "Restart the App Without Redeploying" button
   
 1. Testing the change
 
   ![Register](instructions/27-it-works!.png)
   
+  At this point you are equipped to perform quick changes to your app and to have them taken into account by the store.
+  
+1. To register your pricing engine with the store, on the store homepage, click **Register a pricing engine**
+
+  ![Register](instructions/34-register-pricing.png)
+  
+1. Enter your engine information and click **Register**
+
+  ![Register](instructions/35-add-endpoint.png)
+  
+  ![Register](instructions/36-added.png)
+
+### Committing changes to the main repository
+
+Up to this point, all the changes you made are local to the web editor and have not been committed to the Git repository for your project.
+
 1. To commit the changes made in the web editor, switch to the Git view
 
   ![Register](instructions/28-git-view.png)
@@ -141,17 +165,7 @@ In this section, you will create your Bluemix account, deploy an empty pricing e
   ![Register](instructions/32-push-to-remote.png)  
   
   ![Register](instructions/33-done.png)
-  
-1. To register your pricing engine with the store, on the store homepage, click **Register a pricing engine**
-
-  ![Register](instructions/34-register-pricing.png)
-  
-1. Enter your engine information and click **Register**
-
-  ![Register](instructions/35-add-endpoint.png)
-  
-  ![Register](instructions/36-added.png)
-  
+    
 ## Running the pricing engine on Bluemix
 
 Use this section if you want to use your local development environment to develop and deploy your application.
