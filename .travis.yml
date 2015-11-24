@@ -15,4 +15,4 @@ deploy:
   script: export CF_API=https://api.eu-gb.bluemix.net && cf-blue-green-travis
   on:
     branch: master
-    repo: IBM-Bluemix/carpaccio-pricing
+    repo: l2fprod/carpaccio-pricing
