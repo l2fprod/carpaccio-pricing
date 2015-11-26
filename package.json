@@ -4,8 +4,7 @@
   "description": "Empty pricing engine implementation for the carpaccio game",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "postinstall": "bower install --allow-root"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +17,6 @@
   },
   "homepage": "https://github.com/l2fprod/carpaccio-pricing#readme",
   "dependencies": {
-    "bower": "^1.6.5",
     "cfenv": "^1.0.3",
     "express": "^4.13.3"
   }
