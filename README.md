@@ -29,6 +29,8 @@ In this section, you learn how to do the following:
 - connect your pricing engine to the main store.
 
 
+### Creating a Bluemix account
+
 1. Go to [ibm.com/bluemix](http://ibm.com/bluemix) and click **Sign Up**.
 
   ![Go to ibm.com/bluemix](instructions/01-go-to-bluemix.png)
@@ -48,6 +50,8 @@ In this section, you learn how to do the following:
   After you log in, the Bluemix console displays on the dashboard:  
 
   ![Register](instructions/07-logged.png)
+
+### Deploying the empty pricing engine
 
 5. Click the deploy button below:
 
@@ -81,11 +85,15 @@ In this section, you learn how to do the following:
 
   ![Register](instructions/16-view-app.png)
 
+### Making live changes to the application
+
 12. We are now going to perform changes to the running application. Go back to the "Deploy to Bluemix" page and click **Edit Code**.
 
   ![Register](instructions/17-edit-app.png)
 
-13. The Web Editor displaus on your app:
+  If you are coming back to these steps, you can get to the Web Editor by locating your app in the Bluemix console and clicking the "Edit Code" button in the application overview.
+  
+13. The Web Editor displays on your app:
 
   ![Register](instructions/18-web-editor.png)
 
