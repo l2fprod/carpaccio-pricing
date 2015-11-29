@@ -77,6 +77,20 @@
 
         </form>
 
+        <h3>Registering your pricing engine</h3>
+        <p>
+          Use the following endpoint URL when adding your pricing engine to the Carpaccio store.
+          Ask the store URL to its owner.
+        </p>
+        <form>
+          <div class="form-group">
+            <label>Endpoint URL</label>
+            <input class="form-control" type="text" id="endpoint" disabled />
+          </div>
+        </form>
+        <script>
+          document.getElementById("endpoint").value = location.protocol + "//" + location.hostname + ":" + location.port + "/pricing";
+        </script>
       </div>
     </div>
   </div>
