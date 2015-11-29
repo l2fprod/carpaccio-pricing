@@ -89,7 +89,7 @@
           </div>
         </form>
         <script>
-          document.getElementById("endpoint").value = location.protocol + "//" + location.hostname + ":" + location.port + "/pricing";
+          document.getElementById("endpoint").value = location.protocol + "//" + location.hostname + (location.port.length > 0 ? ":" + location.port : "") + "/pricing";
         </script>
       </div>
     </div>
