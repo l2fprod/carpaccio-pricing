@@ -157,7 +157,7 @@ In this section, you learn how to do the following:
 
 1. Obtain the store location from the organizer.
 
-2. Go to the store homepage, scroll down and click **Register a pricing engine**.
+2. Go to the store homepage and click **Register a pricing engine** in the Pricing column on the right.
 
   ![Register](instructions/34-register-pricing.png)
 
